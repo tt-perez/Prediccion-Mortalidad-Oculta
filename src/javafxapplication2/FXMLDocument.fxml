@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main_form" maxHeight="722.0" maxWidth="428.0" minHeight="600.0" minWidth="400.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="647.0" prefWidth="428.0" styleClass="radius" stylesheets="@../design/pageDesign.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLDocumentController">
+    <children>
+      <AnchorPane prefHeight="647.0" prefWidth="428.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../design/Ministerio-Salud-Publica-Cuba.jpg" />
+               </image>
+            </ImageView>
+            <Label focusTraversable="false" prefHeight="35.0" prefWidth="108.0" text="OSPITAL" underline="true" AnchorPane.rightAnchor="-22.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <AnchorPane fx:id="login_form" maxHeight="720.0" maxWidth="428.0" minHeight="572.0" minWidth="400.0" prefHeight="572.0" prefWidth="428.0" stylesheets="@../design/pageDesign.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="147.0" layoutY="111.0" prefHeight="30.0" prefWidth="142.0" text="Iniciar Sesión">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="usuario" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="141.0" prefHeight="20.0" prefWidth="118.0" text="Doctor" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="login_pass" focusTraversable="false" layoutX="72.0" layoutY="204.0" prefHeight="44.0" prefWidth="291.0" promptText="Contraseña" style="-fx-border-color: BLACK; -fx-border-width: 0 0 1 0; -fx-background-color: TRANSPARENT;" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" AnchorPane.leftAnchor="72.0" />
+                        <FontAwesomeIconView glyphName="KEY" layoutX="47.0" layoutY="228.0" size="18" text="" AnchorPane.leftAnchor="47.0" />
+                        <Button fx:id="bot_login" focusTraversable="false" layoutX="72.0" layoutY="297.0" mnemonicParsing="false" onAction="#Login" prefHeight="51.0" prefWidth="291.0" style="-fx-background-radius: 5px;" stylesheets="@../design/pageDesign.css" text="Iniciar Sesión" textAlignment="CENTER" AnchorPane.leftAnchor="72.0">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="textADM" layoutX="119.0" layoutY="471.0" text="Administrador">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="textDR" layoutX="250.0" layoutY="471.0" text="Doctor">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="login_link" focusTraversable="false" layoutX="143.0" layoutY="511.0" onAction="#visitar" prefHeight="26.0" prefWidth="159.0" text="Entrar como visitante" />
+                        <FontAwesomeIconView fx:id="login_fot" accessibleRole="BUTTON" fill="#1a00ff" glyphName="USER_MD" layoutX="185.0" layoutY="100.0" size="80" wrappingWidth="57.94290733337402">
+                           <effect>
+                              <DropShadow height="10.0" radius="4.5" width="10.0" />
+                           </effect>
+                        </FontAwesomeIconView>
+                        <Hyperlink fx:id="usuarioADM" focusTraversable="false" layoutX="128.0" layoutY="380.0" onAction="#seleccionarUsuario" prefHeight="86.0" prefWidth="58.0" styleClass="my-icon1">
+                           <graphic>
+                              <FontAwesomeIconView fx:id="idADM" glyphName="USER" size="80" wrappingWidth="59.199951171875" />
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink fx:id="usuarioDR" focusTraversable="false" layoutX="235.0" layoutY="379.0" onAction="#seleccionarUsuario" styleClass="my-icon">
+                           <graphic>
+                              <FontAwesomeIconView fx:id="idDR" accessibleRole="BUTTON" glyphName="USER_MD" size="80" text="" wrappingWidth="64.0" />
+                           </graphic>
+                        </Hyperlink>
+                        <Label fx:id="alerta_pass" alignment="CENTER" layoutX="13.0" layoutY="259.0" prefHeight="35.0" prefWidth="402.0" styleClass="alerta" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <TextField fx:id="login_textpass" focusTraversable="false" layoutX="72.0" layoutY="204.0" prefHeight="44.0" prefWidth="291.0" promptText="Contraseña" style="-fx-background-color: TRANSPARENT; -fx-border-color: BLACK; -fx-border-width: 0 0 1 0;" styleClass="textfield-1" stylesheets="@../design/pageDesign.css" visible="false" />
+                        <Hyperlink fx:id="login_ojo" focusTraversable="false" layoutX="329.0" layoutY="213.0" onAction="#ver">
+                           <graphic>
+                              <FontAwesomeIconView fx:id="register_ojo" glyphName="EYE" size="16" wrappingWidth="20.5999755859375" />
+                           </graphic>
+                        </Hyperlink>
+                        <Label fx:id="label" layoutX="82.0" layoutY="196.0" prefHeight="18.0" prefWidth="81.0" style="-fx-background-color: WHITE;" text=" Contraseña" visible="false" AnchorPane.leftAnchor="82.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <FontAwesomeIconView glyphName="H_SQUARE" layoutX="320.0" layoutY="27.0" size="25" text="" wrappingWidth="21.428571701049805" AnchorPane.rightAnchor="86.5714282989502">
+               <effect>
+                  <Reflection />
+               </effect>
+            </FontAwesomeIconView>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

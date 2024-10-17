@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="664.0" prefWidth="784.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ea6d6d 0.0%, #ea6d6d 6.3257%, #ea6d6d 17.259%, #ff5e5e 33.2922%, #e45858 44.0108%, #dc3826 55.9892%, #a90e0e 76.0431%, #ac0a0a 86.176%, #9e0000 97.5774%, #9e0000 100.0%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLAdmController">
+   <children>
+      <AnchorPane fx:id="panelInfo" layoutX="247.0" layoutY="94.0" prefHeight="682.0" prefWidth="937.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" stylesheets="@../design/pageDoctor.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="94.0">
+         <children>
+            <TextArea editable="false" layoutX="-8.0" layoutY="-2.0" prefHeight="432.0" prefWidth="555.0" stylesheets="@../design/pageAdm.css" text="Usted como administrador es una parte crucial de la aplicación, ya que tiene acceso a información confidencial y es responsable de mantener la integridad de los datos. Es el encanrgado de garantizar que la información se almacene de manera segura y que solo se comparta con personas autorizadas. Además, garantiza que los datos se actualicen regularmente y que se realicen copias de seguridad de estos para evitar la pérdida de información importante. Este usuario es el encargado de garantizar que los datos se almacenen de manera segura y que se mantengan actualizados. Si estos no se almacenan de manera segura, pueden ser vulnerables a ataques maliciosos y pueden ser robados o dañados. Igualmente si no se actualizan regularmente, pueden volverse obsoletos y no ser útiles para los usuarios de la aplicación. Si no se realizan copias de seguridad de la información, pueden perderse en caso de un fallo del sistema o de un error humano. Además, el administrador es responsable de cambiar las contraseñas de inicio de sesión de los demás usuarios y exportar los datos a un archivo CSV, si no realiza estas tareas de manera adecuada, los datos pueden estar en riesgo de ser robados o dañados. Por lo tanto, es importante que sea una persona de confianza y tenga experiencia en la gestión de datos.&#10;&#10;Características generales de la investigación. Tipo y diseño del estudio.&#10;Se realiza una investigación de desarrollo, observacional, descriptiva, longitudinal y prospectiva, en la UCI del Hospital Universitario Arnaldo Milián Castro de Villa Clara en el período comprendido desde enero del año 2014 a diciembre del año 2016.&#10;&#10;Universo y muestra&#10;El universo de estudio quedó conformado por 226 pacientes que recibieron ventilación artificial mecánica por 24 horas o más durante su estancia en UCI y fueron egresados a otro servicio del propio centro hospitalario. La muestra estuvo conformada por 208 pacientes.&#10;Criterios de inclusión&#10;- Pacientes ingresados en UCI con tiempo de VAM ≥ 24 horas que se egresaron vivos a otro servicio del centro.&#10;Criterios de exclusión&#10;- Pacientes egresados de UCI hacia otras instituciones de salud donde no se pudo conocer la evolución final.&#10;- Pacientes en los que se apruebe alguna modalidad de limitación del esfuerzo terapéutico durante la estancia en UCI o fuera de esta.&#10;- Pacientes que aún permanecían en el hospital al momento del cierre del estudio.&#10;- Pacientes en los que la información recolectada no estuvo disponible por dificultades con la historia clínica.&#10;&#10;Análisis y discusión de los resultados:&#10;Durante el período de estudio ingresan en UCI un total de 1027 pacientes de los cuales fallecen 189 (18,4%), se aplica ventilación artificial mecánica en 495 pacientes de los cuales fallecen en UCI 161 (32,5%), representando los fallecidos ventilados el 85,18% del total de pacientes fallecidos. Se ventilan 24 horas o más 334 pacientes de los que fallecen 108 (32.3%). Se egresan satisfactoriamente 226 pacientes de los cuales se incorporan al estudio 208 (96,29%), ya que al momento del cierre del estudio 7 pacientes se encontraban aún ingresados en el hospital, 3 fueron trasladados a otras instituciones donde no fue posible conocer su evolución y en 8 ocasiones no fue posible acceder a la historia clínica; de ellos fallecen 32 (15,4%). &#10;Puede apreciarse con claridad la importante relación existente entre la mortalidad en UCI y la necesidad de VAM, ya que más del 85% del total de fallecidos en UCI está representado por pacientes que recibieron VAM. Resultado este que se espera si se considera que la necesidad de VAM se asocia a mayor gravedad y peor pronóstico en UCI. Cabría entonces preguntarse si sería peor el pronóstico de los pacientes que reciben VAM en UCI y se trasladan hacia sala convencional.&#10;&#10;Aspectos éticos:&#10;En el estudio no se realiza ningún tipo de intervención, en todos los casos se actúa según los protocolos de prácticas establecidos en el centro para cada patología.&#10;En ningún caso resulta posible identificar a alguno de los pacientes incluidos en el estudio, en las fichas de recolección de datos o en la base de datos digital no se recoge el nombre del paciente, el número de la historia clínica, la cama u otra información que permita identificar a los mismos.&#10;El perfil del proyecto fue sometido a la consideración del consejo científico del Hospital Arnaldo Milián Castro, donde además se analizaron los aspectos éticos relacionados con el mismo.&#10;No se declara conflicto de intereses.&#10;En resumen, el administrador es una parte fundamental de la aplicación y es responsable de garantizar que los datos se almacenen de manera segura y que se mantengan actualizados. Si el administrador no realiza estas tareas de manera adecuada, los datos pueden estar en riesgo de ser robados o dañados." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextArea>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <MenuBar layoutX="1.0" prefHeight="26.0" prefWidth="1205.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ea6d6d 0.0%, #ea6d6d 6.3257%, #ea6d6d 17.259%, #ff5e5e 33.2922%, #e45858 44.0108%, #dc3826 55.9892%, #a90e0e 76.0431%, #ac0a0a 86.176%, #9e0000 97.5774%, #9e0000 100.0%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" style="fx-background-color: red;" text="Archivos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirpanelCambio" text="Cambiar Contraseña">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="COGS" size="18" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="paravolver" mnemonicParsing="false" onAction="#volver" text="Volver a Inicio">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REPLY" size="18" />
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#info" text="Información">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="18" />
+                     </graphic></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Circle fill="#ea6d6d" layoutX="128.0" layoutY="149.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0">
+         <effect>
+            <DropShadow />
+         </effect></Circle>
+      <FontAwesomeIconView glyphName="USER" layoutX="94.0" layoutY="178.0" size="90" wrappingWidth="70.39996337890625">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.020188425302826402">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.05248990578734861">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.0975609756097561">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.22745625841184386">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.22745625841184391">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.24091520861372812">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4804845222072677">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6850605652759084">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></FontAwesomeIconView>
+      <Button fx:id="botRegistrousuarios" layoutX="10.0" layoutY="286.0" mnemonicParsing="false" onAction="#cambiopanel" prefHeight="46.0" prefWidth="230.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #8f0606; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageAdm.css" text="Contraseña del doctor" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="18" />
+         </graphic>
+      </Button>
+      <Button fx:id="botExport" focusTraversable="false" layoutX="10.0" layoutY="369.0" mnemonicParsing="false" onAction="#cambiopanel" prefHeight="46.0" prefWidth="230.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #8f0606; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageAdm.css" text="Exportar a csv" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" size="18" />
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="43.0" layoutY="212.0" prefHeight="27.0" prefWidth="170.0" text="Administrador">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="H_SQUARE" layoutX="650.8857303619371" layoutY="23.0" size="25" AnchorPane.rightAnchor="111.68569793701306" AnchorPane.topAnchor="1.5714282989501953">
+         <effect>
+            <Reflection />
+         </effect>
+      </FontAwesomeIconView>
+      <Hyperlink fx:id="cerrar" focusTraversable="false" layoutX="8.0" layoutY="619.0" onAction="#cerrarApp" style="-fx-text-fill: black;" text="Salir" AnchorPane.bottomAnchor="8.200000000000045" AnchorPane.leftAnchor="8.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="30" />
+         </graphic>
+      </Hyperlink>
+      <AnchorPane fx:id="PanelRegistros" layoutX="253.0" layoutY="94.0" prefHeight="570.0" prefWidth="515.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="94.0">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane maxHeight="543.0" maxWidth="300.0" minHeight="200.0" minWidth="200.0" prefHeight="543.0" prefWidth="300.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <ImageView fx:id="img" fitHeight="110.0" fitWidth="126.0" layoutX="97.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="97.0">
+                           <image>
+                              <Image url="@../design/unnamed.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="anteriordoctor" layoutX="30.0" layoutY="171.0" prefHeight="37.0" prefWidth="238.0" promptText="Introducir" AnchorPane.leftAnchor="30.0" />
+                        <TextField fx:id="nuevadoctor" layoutX="31.0" layoutY="267.0" prefHeight="37.0" prefWidth="238.0" promptText="Introducir" AnchorPane.leftAnchor="31.0" />
+                        <TextField fx:id="repeticiondoctor" layoutX="31.0" layoutY="357.0" prefHeight="37.0" prefWidth="238.0" promptText="Introducir" AnchorPane.leftAnchor="31.0" />
+                        <FontAwesomeIconView fill="RED" glyphName="ARROW_RIGHT" layoutX="14.0" layoutY="292.0" size="16" AnchorPane.leftAnchor="14.0" />
+                        <FontAwesomeIconView fill="RED" glyphName="ARROW_RIGHT" layoutX="14.0" layoutY="381.0" size="16" AnchorPane.leftAnchor="14.0" />
+                        <FontAwesomeIconView fill="RED" glyphName="ARROW_RIGHT" layoutX="15.0" layoutY="196.0" size="16" AnchorPane.leftAnchor="15.0" />
+                        <Label layoutX="37.0" layoutY="139.0" prefHeight="27.0" prefWidth="245.0" style="-fx-text-fill: black;" text="Contraseña anterior del doctor" AnchorPane.leftAnchor="37.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="232.0" prefHeight="27.0" prefWidth="261.0" style="-fx-text-fill: black;" text="Nueva contraseña para el doctor" AnchorPane.leftAnchor="37.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="324.0" prefHeight="27.0" prefWidth="182.0" style="-fx-text-fill: black;" text="Repetir contraseña" AnchorPane.leftAnchor="78.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="92.0" layoutY="450.0" mnemonicParsing="false" onAction="#cambiardoctor" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #8f0606; -fx-background-radius: 10px;" text="Cambiar" textFill="WHITE" AnchorPane.leftAnchor="92.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="20" wrappingWidth="28.799964904785156" />
+                           </graphic>
+                        </Button>
+                        <AnchorPane fx:id="panelexito" layoutX="19.0" layoutY="405.0" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #b1d4d3; -fx-background-radius: 15;" visible="false">
+                           <children>
+                              <Text layoutX="23.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operación exitosa" textAlignment="CENTER" wrappingWidth="244.8000244140626">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <FontAwesomeIconView fill="#059e4f" glyphName="CHECK_CIRCLE" layoutX="54.0" layoutY="28.0" size="25" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="avisoinsorrecto" layoutX="64.0" layoutY="214.0" prefHeight="27.0" prefWidth="171.0" style="-fx-text-fill: black;" text="Contraseña incorrecta" visible="false" AnchorPane.leftAnchor="64.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="avisogeneral" layoutX="64.0" layoutY="407.0" prefHeight="27.0" prefWidth="171.0" style="-fx-text-fill: black;" text="Contraseñas diferentes" visible="false" AnchorPane.leftAnchor="64.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" />
+                           </graphic>
+                        </Label>
+                        <AnchorPane fx:id="panelexitoso" layoutX="19.0" layoutY="502.0" prefHeight="38.0" prefWidth="262.0" style="-fx-background-color: #b1d4d3; -fx-background-radius: 15;" visible="false">
+                           <children>
+                              <Text layoutX="23.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operación exitosa" textAlignment="CENTER" wrappingWidth="244.8000244140626">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <FontAwesomeIconView fill="#059e4f" glyphName="CHECK_CIRCLE" layoutX="54.0" layoutY="28.0" size="25" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <Label focusTraversable="false" layoutX="675.0" layoutY="-4.0" prefHeight="35.0" prefWidth="108.0" text="OSPITAL" textFill="WHITE" underline="true" AnchorPane.rightAnchor="1.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.08" fraction="0.65" topOpacity="0.57" />
+         </effect>
+      </Label>
+      <Label fx:id="marcador" layoutX="266.0" layoutY="49.0" prefHeight="32.0" prefWidth="430.0" text="CONTRASEÑA DEL DOCTOR">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="ventanaCambioC" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="387.0" maxWidth="490.0" minHeight="150.0" minWidth="440.0" prefHeight="371.0" prefWidth="490.0" style="-fx-background-color: white; -fx-background-radius: 25px;" StackPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="CambiarContra" layoutX="282.0" layoutY="314.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #8f0606; -fx-background-radius: 10px;" text="Cambiar" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="20" wrappingWidth="28.799964904785156" />
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="anterior" layoutX="217.0" layoutY="107.0" prefHeight="37.0" prefWidth="238.0" promptText="Introducir" />
+                  <TextField fx:id="nueva" layoutX="217.0" layoutY="175.0" prefHeight="37.0" prefWidth="238.0" promptText="Introducir" />
+                  <TextField fx:id="repeticion" layoutX="218.0" layoutY="243.0" prefHeight="37.0" prefWidth="238.0" promptText="Introducir" />
+                  <Button fx:id="CancelarContra" layoutX="94.0" layoutY="314.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #8f0606; -fx-background-radius: 10px;" text="Cancelar" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="20" wrappingWidth="28.799964904785156" />
+                     </graphic>
+                  </Button>
+                  <Label layoutX="35.0" layoutY="116.0" prefHeight="27.0" prefWidth="171.0" style="-fx-text-fill: black;" text="Contraseña anterior">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="ARROW_RIGHT" size="16" />
+                     </graphic>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="182.0" prefHeight="27.0" prefWidth="182.0" style="-fx-text-fill: black;" text="Nueva contraseña">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="ARROW_RIGHT" size="16" />
+                     </graphic>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="246.0" prefHeight="27.0" prefWidth="182.0" style="-fx-text-fill: black;" text="Repetir contraseña">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="ARROW_RIGHT" size="16" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="avisoincAdm" layoutX="241.0" layoutY="145.0" prefHeight="27.0" prefWidth="171.0" style="-fx-text-fill: black;" text="Contraseña incorrecta" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="WARNING" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="avisogeneralAdm" layoutX="241.0" layoutY="218.0" prefHeight="27.0" prefWidth="171.0" style="-fx-text-fill: black;" text="Contraseñas diferentes" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="WARNING" />
+                     </graphic>
+                  </Label>
+                  <FontAwesomeIconView fill="#8f0606" glyphName="REFRESH" layoutX="224.0" layoutY="77.0" size="60">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect></FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

@@ -1,0 +1,128 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/10/2023, 12:17:21 PM
+    Author     : racli
+*/
+.table-view{
+    -fx-padding: 0;
+    -fx-border-radius:20px 20px 0px 0px;
+    -fx-border-color: transparent; 
+        -fx-background-color: transparent; 
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #5c3dd4 0.0%, #5c3dd4 0.9421%, #5c3dd4 13.1898%, #6d7ee3 25.7828%, #5c3dd4 41.319%, #5b3dd4 54.1703%, #6d7ee3 69.179%, #5c3dd4 83.1763%, #2f5cd9 97.039%, #2f5cd9 100.0%) ;
+    -fx-background-radius: 20px 20px 20px 20px ;
+    
+}
+.table-view .column-header, .filter{
+-fx-size:40px;
+    -fx-background-color: transparent; 
+    
+    
+}
+
+.table-view .column-header .label{
+-fx-text-fill:#fff;
+    -fx-font-family:Arial;
+    
+}
+.table-view .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #4f5ce1;
+    -fx-background-radius: 10px;
+}
+.table-view .filler {
+    -fx-background-color: transparent; 
+}
+.text-area .scroll-bar:vertical {
+    -fx-background-color: #cccccc; /* Cambia el color de fondo del scroll bar vertical */
+}
+
+.text-area .scroll-bar:horizontal {
+    -fx-background-color: #cccccc; /* Cambia el color de fondo del scroll bar horizontal */
+}
+
+.text-area .scroll-bar .thumb {
+    -fx-background-color: #4f5ce1; /* Cambia el color del pulgarcito del scroll bar */
+}
+
+.text-area {
+    -fx-control-inner-background:  transparent;
+    -fx-background-color:  transparent;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+    -fx-background-insets: 0;
+    -fx-padding: 10;
+    -fx-border-color:  transparent;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-box-border: transparent;
+}
+.tab{ 
+    -fx-background-color: transparent;
+    -fx-border-color:  transparent;
+
+    -fx-font-weight:bold;
+
+  -fx-focus-color: transparent;
+    -fx-font-family:Arial; 
+-fx-cursor: hand;
+
+}
+.scroll-pane .viewport {
+  -fx-background-color: white;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+  -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+  -fx-background-color: #4f5ce1;
+  -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+  -fx-background-color: white;
+}
+
+.tab:selected{
+    -fx-background-color:  #918df2;
+    -fx-background-radius: 20 20 0 0;
+}
+.tab-header-background{
+    -fx-background-color: transparent;
+ 
+}
+
+.btn:hover{
+  
+       -fx-effect:dropshadow(gaussian,rgba(0,0,225,1),10,0,0,0);
+
+}
+.selected{
+     
+       -fx-effect:dropshadow(gaussian,rgba(0,0,225,1),10,0,0,0);
+
+}

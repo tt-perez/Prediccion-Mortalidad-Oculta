@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="843.0" prefWidth="1208.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #918df2 0.0%, #918df2 0.6729%, #6d7ee3 35.9354%, #3d35cc 77.5236%, #3a36a4 100.0%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.DoctorFXMLController">
+     <children>
+      <Circle fill="#918df2" layoutX="129.0" layoutY="135.0" radius="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0">
+         <effect>
+            <DropShadow />
+         </effect></Circle>
+      <FontAwesomeIconView glyphName="USER_MD" layoutX="90.0" layoutY="167.0" size="100" wrappingWidth="94.39996337890625">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2853658536585366">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.3520533105734825">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.47257656829596556">
+                     <color>
+                        <Color red="0.11666666716337204" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5677740209434395">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></FontAwesomeIconView>
+      <Button fx:id="botRegistroDatos" layoutX="21.0" layoutY="291.0" mnemonicParsing="false" onAction="#CambioPanel" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #3a36a4; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Registro de Datos" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="18" />
+         </graphic></Button>
+      <Button fx:id="botAddPaciente" focusTraversable="false" layoutX="21.0" layoutY="371.0" mnemonicParsing="false" onAction="#CambioPanel" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #3a36a4; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Nuevo Paciente" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="WHEELCHAIR" size="18" />
+         </graphic></Button>
+      <Button fx:id="botEstadist" focusTraversable="false" layoutX="21.0" layoutY="455.0" mnemonicParsing="false" onAction="#CambioPanel" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #3a36a4; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Estadísticas" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="18" />
+         </graphic></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="198.0" text="Doctor">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Hyperlink fx:id="cerrar" layoutX="33.0" layoutY="797.0" onAction="#cerrarApp" style="-fx-text-fill: black;" text="Salir" AnchorPane.bottomAnchor="9.200000000000003" AnchorPane.leftAnchor="33.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="30" />
+         </graphic>
+      </Hyperlink>
+      <AnchorPane fx:id="PanelRegistros" layoutX="248.0" layoutY="87.0" prefHeight="747.0" prefWidth="938.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="87.0">
+         <children>
+            <TableView fx:id="tabla" editable="true" focusTraversable="false" layoutX="20.0" layoutY="66.0" prefHeight="690.0" prefWidth="454.0" stylesheets="@../design/pageDoctor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="66.0">
+              <columns>
+                <TableColumn fx:id="columnacodigo" minWidth="20.0" prefWidth="83.20001220703125" text="Paciente" />
+                  <TableColumn fx:id="columnaedad" prefWidth="81.5999755859375" text="Edad" />
+                  <TableColumn fx:id="columnasexo" prefWidth="78.4000244140625" text="Sexo" />
+                  <TableColumn fx:id="columnarazza" prefWidth="208.7999267578125" text="Color de Piel" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            
+             
+            </TableView>
+            <TabPane layoutX="467.0" layoutY="38.0" prefHeight="698.0" prefWidth="463.0" stylesheets="@../design/pageDoctor.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="467.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="38.0">
+              <tabs>
+                <Tab text="Ingresos/Egresos">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="606.0" prefWidth="448.0">
+                           <children>
+                              <Label fx:id="fechaingreso" layoutX="10.0" layoutY="11.0" prefHeight="26.0" prefWidth="435.0" text="Fecha Ingreso Hospitalario : ">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fechaingresouci" layoutX="10.0" layoutY="37.0" prefHeight="26.0" prefWidth="414.0" text="Fecha Ingreso UCI : ">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fechaegreso" layoutX="10.0" layoutY="89.0" prefHeight="26.0" prefWidth="461.0" text="Fecha Egreso Hospitalario : ">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fechaegresouci" layoutX="10.0" layoutY="63.0" prefHeight="26.0" prefWidth="448.0" text="Fecha Egreso UCI : ">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tablapre" editable="true" layoutX="14.0" layoutY="153.0" prefHeight="233.0" prefWidth="460.0" stylesheets="@../design/pageDoctor.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                                 <columns>
+                                    <TableColumn fx:id="columnapre" prefWidth="197.59999084472656" text="Diagnósticos al ingresar en UCI" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <TableView fx:id="tablapost" editable="true" layoutX="1.0" layoutY="391.0" prefHeight="242.0" prefWidth="460.0" stylesheets="@../design/pageDoctor.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                                 <columns>
+                                    <TableColumn fx:id="columnapost" prefWidth="197.59999084472656" text="Diagnósticos al egresar de UCI" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Label fx:id="salaegresolabel" layoutX="10.0" layoutY="116.0" prefHeight="26.0" prefWidth="461.0" text="Sala de Egreso : ">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="textField" layoutX="224.0" layoutY="90.0" visible="false" AnchorPane.leftAnchor="225.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="UCI">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tablavam" editable="true" layoutX="1.0" layoutY="192.0" prefHeight="470.0" prefWidth="484.0" stylesheets="@../design/pageDoctor.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="192.0">
+                                 <columns>
+                                    <TableColumn fx:id="columnacausa" prefWidth="139.19994807243347" text="   Causa que motivó a VAM" />
+                                    <TableColumn fx:id="columnaclasif" prefWidth="82.4000244140625" text="Clasificación" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Label fx:id="apachelabel" layoutX="21.0" layoutY="13.0" prefHeight="26.0" prefWidth="342.0" text="APACHE II :">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="limitlabel" layoutX="21.0" layoutY="39.0" prefHeight="27.0" prefWidth="422.0" text="Limitación de Esfuerzo Terapéutico :">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dialabel" layoutX="21.0" layoutY="68.0" prefHeight="26.0" prefWidth="275.0" text="Días de Estancia :">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tiempolabel" layoutX="21.0" layoutY="94.0" prefHeight="27.0" prefWidth="382.0" text="Horas conectado al VAM :">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vialabel" layoutX="21.0" layoutY="120.0" prefHeight="27.0" prefWidth="450.0" text="Tipo de vía aérea :">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clasiflabel" layoutX="21.0" layoutY="147.0" prefHeight="27.0" prefWidth="422.0" text="Clasificación de vía aérea :">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabfallecimiento" text="Fallecimiento">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="salalabel" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="357.0" text="Sala de defunción :">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tablanecro" editable="true" layoutY="370.0" prefHeight="286.0" prefWidth="460.0" stylesheets="@../design/pageDoctor.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                                 <columns>
+                                    <TableColumn fx:id="columnaresultadon" prefWidth="139.19994807243347" text="Resultado de necropsia" />
+                                    <TableColumn fx:id="columnatipon" prefWidth="82.4000244140625" text="Tipo de muerte" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <TableView fx:id="tabladefun" editable="true" layoutX="6.0" layoutY="49.0" prefHeight="286.0" prefWidth="460.0" stylesheets="@../design/pageDoctor.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                                 <columns>
+                                    <TableColumn fx:id="columnaresultadod" prefWidth="139.19994807243347" text="Resultado de defunsión" />
+                                    <TableColumn fx:id="columnatipod" prefWidth="82.4000244140625" text="Tipo de muerte" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Text fx:id="nonecro" fill="#3e3131" layoutX="9.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No realización de necropsia" textAlignment="CENTER" wrappingWidth="205.01533889770508" AnchorPane.leftAnchor="9.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Mortalidad Oculta">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <PieChart fx:id="graficaResultado2" layoutY="72.0" prefHeight="446.0" prefWidth="431.0" stylesheets="@../design/estadisticas.css" AnchorPane.bottomAnchor="92.80000000000007" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+               <styleClass>
+                  <String fx:value="tab" />
+                  <String fx:value="tab:selected" />
+               </styleClass>
+             
+            </TabPane>
+            <TextField fx:id="campo" layoutX="48.0" layoutY="17.0" prefHeight="38.0" prefWidth="370.0" promptText="  Buscar" style="-fx-background-color: white; -fx-background-radius: 20;" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Hyperlink fx:id="buscarporCodigo" focusTraversable="false" layoutX="373.0" layoutY="23.0" prefHeight="22.0" prefWidth="26.0" style="-fx-background-color: blue; -fx-background-radius: 20;" AnchorPane.leftAnchor="373.0" AnchorPane.topAnchor="23.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="18" />
+               </graphic>
+            </Hyperlink>
+            <CheckBox fx:id="pacfallecido" layoutX="741.0" layoutY="9.0" mnemonicParsing="false" onAction="#AgregarFallecido" prefHeight="26.0" prefWidth="180.0" stylesheets="@../design/pageDoctor.css" text="Dar como fallecido" visible="false" AnchorPane.rightAnchor="10.0" />
+            <StackPane fx:id="paneldeagregar" layoutX="438.0" layoutY="-40.0" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="panelagregar" maxHeight="660.0" maxWidth="818.0" minHeight="600.0" minWidth="700.0" prefHeight="660.0" prefWidth="818.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+                     <children>
+                        <ComboBox fx:id="Lugar1" focusTraversable="false" layoutX="120.0" layoutY="12.0" prefHeight="30.0" prefWidth="275.0" promptText="Seleccione sala de defunción" style="-fx-border-color: #5c3dd4; -fx-background-color: white; -fx-border-radius: 5;" />
+                        <Label layoutX="395.0" layoutY="46.0" prefHeight="18.0" prefWidth="223.0" text="Resultado(s) de defunsión">
+                           <graphic>
+                              <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                           </graphic>
+                        </Label>
+                        <TableView fx:id="resultadodefun1" editable="true" layoutX="295.0" layoutY="71.0" prefHeight="214.0" prefWidth="394.0" stylesheets="@../design/pageDoctor.css" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="11.0">
+                           <columns>
+                              <TableColumn fx:id="resultDefun1" editable="false" prefWidth="298.4000244140625" text="Resultado" />
+                              <TableColumn fx:id="tipodefun1" prefWidth="211.99993896484375" text="Tipo de muerte" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <ListView fx:id="defunsion1" layoutX="12.0" layoutY="71.0" prefHeight="214.0" prefWidth="266.0" AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="71.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ListView>
+                        <Label layoutX="24.0" layoutY="46.0" prefHeight="18.0" prefWidth="230.0" text="Lista de posible(s) causa(s)">
+                           <graphic>
+                              <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                           </graphic>
+                        </Label>
+                        <Label layoutX="401.0" layoutY="324.0" prefHeight="18.0" prefWidth="194.0" text="Resultado(s) de necropsia">
+                           <graphic>
+                              <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                           </graphic>
+                        </Label>
+                        <ListView fx:id="necropsia1" layoutX="14.0" layoutY="344.0" prefHeight="242.0" prefWidth="266.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ListView>
+                        <Label layoutX="30.0" layoutY="323.0" prefHeight="18.0" prefWidth="230.0" text="Lista de posible(s) causa(s)">
+                           <graphic>
+                              <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                           </graphic>
+                        </Label>
+                        <CheckBox fx:id="noNecropsia1" layoutX="605.0" layoutY="285.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="186.0" text="Necropsia no realizada" />
+                        <TableView fx:id="resultadoNecrop1" editable="true" layoutX="295.0" layoutY="345.0" prefHeight="242.0" prefWidth="512.0" stylesheets="@../design/pageDoctor.css" AnchorPane.rightAnchor="11.0">
+                           <columns>
+                              <TableColumn fx:id="resultadonecro1" prefWidth="307.200018286705" text="Resultado" />
+                              <TableColumn fx:id="tiponecro1" prefWidth="203.199951171875" text="Tipo de muerte" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="botagregar" disable="true" focusTraversable="false" layoutX="618.0" layoutY="599.0" mnemonicParsing="false" onAction="#agregarbd" prefHeight="35.0" prefWidth="116.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #3a36a4; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="  Agregar" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+                           </graphic>
+                        </Button>
+                        <ProgressBar fx:id="progresos" layoutX="402.0" layoutY="609.0" prefWidth="200.0" progress="0.0">
+                           <effect>
+                              <DropShadow height="9.36" radius="5.335" width="13.98" />
+                           </effect>
+                        </ProgressBar>
+                        <Text fx:id="labelporciento" layoutX="468.0" layoutY="603.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="75.99999999999994" />
+                        <Button fx:id="boteliminar" focusTraversable="false" layoutX="45.0" layoutY="599.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="116.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #3a36a4; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </StackPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane fx:id="PanelEstadistica" layoutX="248.0" layoutY="86.0" prefHeight="659.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="86.0">
+         <children>
+            <AnchorPane fx:id="mostrarGrafica" layoutX="409.0" layoutY="17.0" prefHeight="398.0" prefWidth="563.0" style="-fx-background-radius: 20px;" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="17.0" />
+            <AnchorPane fx:id="mostrarbarras" layoutX="14.0" layoutY="324.0" prefHeight="340.0" prefWidth="488.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" />
+            <AnchorPane fx:id="mostrarGrafica1" layoutX="3.0" layoutY="3.0" prefHeight="245.0" prefWidth="379.0" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="556.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <LineChart fx:id="gr1" prefHeight="266.0" prefWidth="379.0" style="-fx-background-color: transparent;" title="Grafica de rayitas1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="x1" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="y1" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mostrarGrafica11" layoutX="494.0" layoutY="470.0" prefHeight="207.0" prefWidth="432.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="494.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="470.0">
+               <children>
+                  <LineChart fx:id="gr2" layoutY="-19.0" prefHeight="221.0" prefWidth="458.0" style="-fx-background-color: transparent;" title="                                      Grafica de rayitas2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-19.0">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" fx:id="x2" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="y2" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelAgregar" layoutY="87.0" prefHeight="744.0" prefWidth="938.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" stylesheets="@../design/pageDoctor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="21.600000000000023" AnchorPane.topAnchor="87.0">
+         <children>
+            <Button fx:id="Boton_Listo" disable="true" focusTraversable="false" layoutX="729.4" layoutY="639.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="180.0" style="-fx-background-color: #5c3dd4; -fx-background-radius: 10px; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Agregar Paciente" textFill="WHITE" AnchorPane.rightAnchor="29.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+             
+            </Button>
+            <AnchorPane fx:id="panelieHospit" layoutX="12.0" layoutY="198.0" prefHeight="194.0" prefWidth="422.0" style="-fx-background-color: whitesmoke;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="198.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="26.0" layoutY="8.0" prefHeight="22.0" prefWidth="313.0" text="Fechas Ingresos/Egresos" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="8.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="FechaIngreso" focusTraversable="false" layoutX="229.0" layoutY="35.0" prefHeight="27.0" prefWidth="180.0" promptText="Fecha" style="-fx-padding: 1; -fx-background-color: #5c3dd4; -fx-text-fill: white; -fx-background-radius: 5;" AnchorPane.leftAnchor="229.0" AnchorPane.topAnchor="35.0" />
+                  <Label layoutX="14.0" layoutY="41.0" prefHeight="18.0" prefWidth="200.0" text="Ingreso Hospitalario:" />
+                  <DatePicker fx:id="FechaAlta" disable="true" focusTraversable="false" layoutX="230.0" layoutY="151.0" prefHeight="27.0" prefWidth="180.0" promptText="Fecha" style="-fx-padding: 1; -fx-background-color: #5c3dd4; -fx-text-fill: white; -fx-background-radius: 5;" />
+                  <Label layoutX="14.0" layoutY="157.0" prefHeight="18.0" prefWidth="186.0" text="Alta Hospitalaria:" />
+                  <DatePicker fx:id="FechaIngresoUci" disable="true" focusTraversable="false" layoutX="230.0" layoutY="74.0" prefHeight="27.0" prefWidth="180.0" promptText="Fecha" style="-fx-padding: 1; -fx-background-color: #5c3dd4; -fx-text-fill: white; -fx-background-radius: 5;" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="74.0" />
+                  <Label layoutX="14.0" layoutY="80.0" prefHeight="18.0" prefWidth="186.0" text="Ingreso en UCI:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="80.0" />
+                  <DatePicker fx:id="fechaEgreso" disable="true" focusTraversable="false" layoutX="229.0" layoutY="112.0" prefHeight="27.0" prefWidth="180.0" promptText="Fecha" style="-fx-padding: 1; -fx-background-color: #5c3dd4; -fx-text-fill: white; -fx-background-radius: 5;" AnchorPane.leftAnchor="229.0" AnchorPane.topAnchor="112.0" />
+                  <Label layoutX="14.0" layoutY="117.0" prefHeight="18.0" prefWidth="180.0" text="Egreso de UCI:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="117.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="DatosPersonales" layoutX="13.0" layoutY="15.0" prefHeight="174.0" prefWidth="422.0" style="-fx-background-color: whitesmoke; -fx-background-radius: 20 0 0 0;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="15.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="27.0" layoutY="9.0" prefHeight="22.0" prefWidth="134.0" text="Datos Personales" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="45.0" prefHeight="18.0" prefWidth="42.0" text="Edad:" AnchorPane.leftAnchor="24.0" />
+                  <Label layoutX="24.0" layoutY="87.0" prefHeight="18.0" prefWidth="42.0" text="Sexo:" AnchorPane.leftAnchor="24.0" />
+                  <Label layoutX="21.0" layoutY="124.0" prefHeight="18.0" prefWidth="94.0" text="Color de Piel:" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="124.0" />
+                 <!-- <TextField fx:id="nombre" layoutX="83.0" layoutY="24.99999999999999" prefHeight="27.0" prefWidth="202.0" AnchorPane.bottomAnchor="184.8" AnchorPane.leftAnchor="83.0" />
+                  <TextField fx:id="ci" layoutX="164.0" layoutY="63.999999999999986" prefHeight="27.0" prefWidth="202.0" AnchorPane.bottomAnchor="145.8" AnchorPane.leftAnchor="164.0" />
+                  <ToggleButtonGroup layoutX="89.0" layoutY="142.0" prefHeight="19.0" prefWidth="230.0" selectionType="SINGLE" AnchorPane.bottomAnchor="75.80000000000001" AnchorPane.leftAnchor="89.0">
+                 <toggles>
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="126.0" text="Femenino" />
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="109.0" text="Masculino" />
+                     </toggles>
+                  </ToggleButtonGroup>   --> 
+                  <Spinner fx:id="edad" layoutX="87.0" layoutY="41.0" prefHeight="27.0" prefWidth="66.0" AnchorPane.leftAnchor="87.0">
+                  
+                  </Spinner>
+                  <RadioButton fx:id="m" layoutX="87.0" layoutY="80.0" mnemonicParsing="false" text="Masculino">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="GrupoSexo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="f" layoutX="205.0" layoutY="80.0" mnemonicParsing="false" text="Femenino" toggleGroup="$GrupoSexo" />
+                  <RadioButton fx:id="mestizo" layoutX="208.0" layoutY="119.0" mnemonicParsing="false" text="Mestiza" AnchorPane.topAnchor="119.0">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="GrupoRaza" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="negro" layoutX="303.0" layoutY="119.0" mnemonicParsing="false" text="Negra" toggleGroup="$GrupoRaza" AnchorPane.topAnchor="119.0" />
+                  <RadioButton fx:id="blanco" layoutX="119.0" layoutY="119.0" mnemonicParsing="false" text="Blanca" toggleGroup="$GrupoRaza" AnchorPane.topAnchor="119.0" />
+              <!--    <ToggleButtonGroup layoutX="113.0" layoutY="179.0" prefHeight="19.0" prefWidth="230.0" selectionType="SINGLE" AnchorPane.bottomAnchor="38.80000000000001" AnchorPane.leftAnchor="113.0">
+               <toggles>
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="87.0" text="Blanca" />
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="92.0" text="Mestizo" />
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="94.0" text="Negro" />
+                     </toggles>
+                  </ToggleButtonGroup>   -->   
+               </children>
+            </AnchorPane>
+            <ProgressIndicator fx:id="progreso" focusTraversable="false" layoutX="735.4" layoutY="458.0" maxHeight="167.0" maxWidth="274.0" prefHeight="167.0" prefWidth="170.0" progress="0.0" style="-fx-progress-color: #5c3dd4;" AnchorPane.rightAnchor="32.60000000000002">
+               <effect>
+                  <DropShadow />
+               </effect></ProgressIndicator>
+            <AnchorPane fx:id="panelFallece" layoutX="12.0" layoutY="397.0" prefHeight="340.0" prefWidth="693.0" style="-fx-background-color: whitesmoke;" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="397.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="20.0" layoutY="8.0" prefHeight="22.0" prefWidth="116.0" text="Fallecimiento">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="Lugar" focusTraversable="false" layoutX="136.0" layoutY="9.0" prefHeight="30.0" prefWidth="275.0" promptText="Seleccione sala de defunción" style="-fx-border-color: #5c3dd4; -fx-background-color: white; -fx-border-radius: 5;" AnchorPane.leftAnchor="136.0" />
+                  <CheckBox fx:id="noFallece" layoutX="538.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="No fallecido" AnchorPane.rightAnchor="17.600000000000023" />
+                  <TabPane fx:id="tablaprocedimiento" layoutX="2.0" layoutY="40.0" prefHeight="293.0" prefWidth="689.0" style="-fx-background-color: whitesmoke;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="46.39999999999998">
+                     <tabs>
+                        <Tab text="Necropsia">
+                           <content>
+                              <AnchorPane fx:id="panelnecro" minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="475.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="293.0" layoutY="14.0" prefHeight="18.0" prefWidth="194.0" text="Resultado(s) de necropsia" AnchorPane.leftAnchor="294.0">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                       </graphic>
+                                    </Label>
+                                    <ListView fx:id="necropsia" layoutX="9.0" layoutY="39.0" prefHeight="196.0" prefWidth="284.0" style="-fx-border-color: TRANSPARENT;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="39.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ListView>
+                                    <Label layoutX="5.0" layoutY="14.0" prefHeight="18.0" prefWidth="230.0" text="Lista de posible(s) causa(s)">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                       </graphic>
+                                    </Label>
+                                    <CheckBox fx:id="noNecropsia" layoutX="482.4" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="186.0" text="Necropsia no realizada" AnchorPane.rightAnchor="1.6000000000000227" AnchorPane.topAnchor="10.0" />
+                                    <TableView fx:id="resultadoNecrop" editable="true" layoutX="265.0" layoutY="39.0" prefHeight="188.0" prefWidth="394.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="293.20000000000005" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="39.0">
+                                      <columns>
+                                        <TableColumn fx:id="resultadonecro" prefWidth="75.0" text="Resultado" />
+                                        <TableColumn fx:id="tiponecro" prefWidth="75.0" text="Tipo de muerte" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Defunción">
+                           <content>
+                              <AnchorPane fx:id="paneldefun" prefHeight="244.0" prefWidth="690.0" style="-fx-background-color: white;">
+                                 <effect>
+                                    <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                                       <color>
+                                          <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <children>
+                                    <Label layoutX="345.0" layoutY="14.0" prefHeight="18.0" prefWidth="223.0" text="Resultado(s) de defunción" AnchorPane.leftAnchor="294.0">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                       </graphic>
+                                    </Label>
+                                    <ListView fx:id="defunsion" layoutX="-2.0" layoutY="39.0" prefHeight="194.0" prefWidth="287.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="39.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ListView>
+                                    <Label layoutX="5.0" layoutY="14.0" prefHeight="18.0" prefWidth="230.0" text="Lista de posible(s) causa(s)">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                       </graphic>
+                                    </Label>
+                                    <TableView fx:id="resultadodefun" editable="true" layoutX="294.0" layoutY="39.0" prefHeight="182.0" prefWidth="394.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="39.0">
+                                       <columns>
+                                          <TableColumn fx:id="resultDefun" editable="false" prefWidth="75.0" text="Resultado" />
+                                          <TableColumn fx:id="tipodefun" prefWidth="75.0" text="Tipo de muerte" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <TabPane layoutX="439.0" layoutY="16.0" prefHeight="375.0" prefWidth="483.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="439.0" AnchorPane.rightAnchor="8.0">
+              <tabs>
+                <Tab text="Ingreso en UCI">
+                  <content>
+                    <AnchorPane fx:id="panelIngresoUci" minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="475.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="20.0" layoutY="18.0" prefHeight="18.0" prefWidth="134.0" text="Valor de APACHE II:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="18.0" />
+                              <Label layoutX="274.0" layoutY="82.0" prefHeight="18.0" prefWidth="246.0" text="Diagnóstico(s) al ingreso en UCI" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="82.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                 </graphic></Label>
+                              <Label layoutX="20.0" layoutY="50.0" prefHeight="18.0" prefWidth="238.0" text="Limitación del esfuerzo Terapéutico:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0" />
+                              <RadioButton layoutX="274.0" layoutY="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" text="No" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="44.0" fx:id="xfalse">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="limitacion" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <Spinner fx:id="apache" layoutX="159.0" layoutY="13.0" prefHeight="27.0" prefWidth="82.0" AnchorPane.leftAnchor="159.0" AnchorPane.topAnchor="13.0" />
+                              <RadioButton layoutX="340.0" layoutY="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="66.0" text="Sí" toggleGroup="$limitacion" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="44.0" fx:id="xtrue" />
+                              <ListView fx:id="diagnostico1" layoutX="9.0" layoutY="111.0" prefHeight="202.0" prefWidth="234.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="111.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ListView>
+                              <ListView fx:id="diagnostico2" layoutX="268.0" layoutY="112.0" prefHeight="202.0" prefWidth="217.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="112.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ListView>
+                              <Label layoutX="14.0" layoutY="82.0" prefHeight="18.0" prefWidth="230.0" text="Lista de posible(s) diagnostico(s)">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Ventilación Artificial Mecánica">
+                  <content>
+                    <AnchorPane fx:id="panelVAM" minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="475.0" style="-fx-background-color: white;">
+                           <children>
+                              <ComboBox fx:id="via" focusTraversable="false" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="214.0" promptText="Seleccionar vía aérea" style="-fx-border-color: #5c3dd4; -fx-background-color: white; -fx-border-radius: 5;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                              <Label layoutX="252.0" layoutY="20.0" prefHeight="18.0" prefWidth="108.0" text="Tiempo de uso" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="20.0" />
+                              <Spinner fx:id="timeVam" layoutX="353.0" layoutY="15.0" prefHeight="27.0" prefWidth="66.0" AnchorPane.rightAnchor="63.79999999999998" AnchorPane.topAnchor="15.0" />
+                              <Label layoutX="423.0" layoutY="20.0" prefHeight="18.0" prefWidth="60.0" text="en horas" AnchorPane.rightAnchor="0.19999999999998863" AnchorPane.topAnchor="20.0" />
+                              <TabPane fx:id="tabMayor" disable="true" layoutX="5.0" layoutY="83.0" prefHeight="234.0" prefWidth="475.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="83.0">
+                                <tabs>
+                                  <Tab text="Respiratorias">
+                                       <content>
+                                          <AnchorPane fx:id="Fallo1Apane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <ScrollPane fx:id="Fallo1A" focusTraversable="false" layoutX="14.0" layoutY="-24.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../design/pageDoctor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children></AnchorPane>
+                                       </content>
+                                  </Tab>
+                                  <Tab text="No Respiratorias">
+                                    <content>
+                                      <AnchorPane fx:id="Fallo2Apane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <ScrollPane fx:id="Fallo2A" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" stylesheets="@../design/pageDoctor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                              <Button fx:id="tablaFallo" disable="true" layoutX="207.8" layoutY="63.80000000000001" mnemonicParsing="false" prefHeight="32.0" prefWidth="226.0" style="-fx-background-color: #5c3dd4; -fx-background-radius: 10px;" styleClass="btn" text="Pulse al terminar selección" textFill="WHITE" AnchorPane.bottomAnchor="221.0" AnchorPane.rightAnchor="9.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="tablaFallo1" layoutX="12.0" layoutY="51.0" mnemonicParsing="false" onAction="#habilitarTabla" prefHeight="32.0" prefWidth="275.0" style="-fx-background-color: #5c3dd4; -fx-background-radius: 10px;" styleClass="btn" text="Seleccionar la(s) causa(s) de uso de VAM" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <AnchorPane fx:id="noSeleccion" layoutX="237.4" layoutY="39.0" prefHeight="30.0" prefWidth="241.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.rightAnchor="9.0">
+                                 <children>
+                                    <Label fx:id="avisoNocausa" alignment="CENTER" layoutX="26.0" layoutY="8.0" prefHeight="18.0" prefWidth="194.0" text="No ha seleccionado causa(s)" />
+                                    <FontAwesomeIconView fill="RED" glyphName="WARNING" layoutX="1.2000026702881712" layoutY="21.0" size="20" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="225.19999732971183" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Egreso de UCI">
+                     <content>
+                        <AnchorPane fx:id="panelEgresoUci" prefHeight="322.0" prefWidth="475.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                                 <color>
+                                    <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <ComboBox fx:id="Sala" focusTraversable="false" layoutX="293.0" layoutY="14.0" prefHeight="30.0" prefWidth="170.0" promptText="Destino" style="-fx-border-color: #5c3dd4; -fx-background-color: white; -fx-border-radius: 5;" AnchorPane.leftAnchor="293.0" AnchorPane.topAnchor="14.0" />
+                              <Label layoutX="11.0" layoutY="19.0" prefHeight="18.0" prefWidth="258.0" text="Especialidad de la sala a la que egresa:" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="19.0" />
+                              <Label layoutX="265.0" layoutY="56.0" prefHeight="18.0" prefWidth="223.0" text="Diagnóstico(s) al egreso de UCI">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                 </graphic>
+                              </Label>
+                              <ListView fx:id="diagnosticoE1" layoutX="-2.0" layoutY="79.0" prefHeight="234.0" prefWidth="234.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="79.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ListView>
+                              <ListView fx:id="diagnosticoE2" layoutX="262.0" layoutY="80.0" prefHeight="234.0" prefWidth="224.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="80.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ListView>
+                              <Label layoutX="5.0" layoutY="54.0" prefHeight="18.0" prefWidth="230.0" text="Lista de posible(s) diagnostico(s)">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4912ff" glyphName="ARROW_DOWN" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Label fx:id="marcador" layoutX="265.0" layoutY="36.0" prefHeight="32.0" prefWidth="730.0" text="REGISTRO DE DATOS">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="PanelInformacion" layoutX="248.0" layoutY="87.0" prefHeight="659.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" stylesheets="@../design/pageDoctor.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="21.600000000000023" AnchorPane.topAnchor="87.0">
+         <children>
+            <TextArea editable="false" prefHeight="657.0" prefWidth="935.0" stylesheets="@../design/pageVisitante.css" text="El estudio de la mortalidad oculta es de gran importancia para los médicos y profesionales de la salud que trabajan en cuidados intensivos, ya que permite identificar y analizar los factores que pueden influir en la evolución de los pacientes después de su egreso de la unidad de cuidados intensivos (UCI). La mortalidad oculta se refiere a los pacientes que mueren después de haber sido dados de alta de la UCI, pero antes de abandonar el hospital. Estos pacientes no son contabilizados en las estadísticas de mortalidad de la UCI, lo que puede llevar a una subestimación de la tasa real de mortalidad en estos pacientes.&#10;El desarrollo de un software que permita almacenar los datos pertinentes y que ayude a predecir un score pronóstico para la mortalidad post-egreso de la UCI en pacientes ventilados proporcionaría a los médicos una herramienta objetiva y basada en evidencia para evaluar el riesgo individual de cada paciente. Esto les permitiría tomar decisiones informadas sobre la gestión de estos pacientes, incluida la planificación de cuidados posteriores al egreso de la UCI y la identificación de aquellos que podrían beneficiarse de una atención más intensiva o de intervenciones específicas para mejorar su pronóstico.&#10;El estudio de la mortalidad oculta puede ayudar a los médicos a identificar los factores de riesgo que pueden influir en la evolución de los pacientes después de su egreso de la UCI. Esto puede incluir factores como la edad, el sexo, la gravedad de la enfermedad, la duración de la estancia en la UCI, la necesidad de ventilación mecánica y otros tratamientos, así como la calidad de la atención recibida después del egreso de la UCI. Al identificar estos factores, los médicos pueden desarrollar estrategias para mejorar la atención y el seguimiento de los pacientes después de su egreso de la UCI, lo que puede mejorar la supervivencia y la calidad de vida de estos pacientes.&#10;Además, el estudio de la mortalidad oculta puede ayudar a los médicos a evaluar la calidad de la atención en la UCI y en el hospital en general. Si se identifican factores que contribuyen a la mortalidad oculta, los médicos pueden trabajar para mejorar la atención y el seguimiento de los pacientes después de su egreso de la UCI, lo que puede mejorar la calidad de la atención en el hospital en general.&#10;&#10;Características generales de la investigación. Tipo y diseño del estudio.&#10;Se realiza una investigación de desarrollo, observacional, descriptiva, longitudinal y prospectiva, en la UCI del Hospital Universitario Arnaldo Milián Castro de Villa Clara en el período comprendido desde enero del año 2014 a diciembre del año 2016.&#10;&#10;Universo y muestra&#10;El universo de estudio quedó conformado por 226 pacientes que recibieron ventilación artificial mecánica por 24 horas o más durante su estancia en UCI y fueron egresados a otro servicio del propio centro hospitalario. La muestra estuvo conformada por 208 pacientes.&#10;Criterios de inclusión&#10;- Pacientes ingresados en UCI con tiempo de VAM ≥ 24 horas que se egresaron vivos a otro servicio del centro.&#10;Criterios de exclusión&#10;- Pacientes egresados de UCI hacia otras instituciones de salud donde no se pudo conocer la evolución final.&#10;- Pacientes en los que se apruebe alguna modalidad de limitación del esfuerzo terapéutico durante la estancia en UCI o fuera de esta.&#10;- Pacientes que aún permanecían en el hospital al momento del cierre del estudio.&#10;- Pacientes en los que la información recolectada no estuvo disponible por dificultades con la historia clínica.&#10;&#10;Análisis y discusión de los resultados:&#10;Durante el período de estudio ingresan en UCI un total de 1027 pacientes de los cuales fallecen 189 (18,4%), se aplica ventilación artificial mecánica en 495 pacientes de los cuales fallecen en UCI 161 (32,5%), representando los fallecidos ventilados el 85,18% del total de pacientes fallecidos. Se ventilan 24 horas o más 334 pacientes de los que fallecen 108 (32.3%). Se egresan satisfactoriamente 226 pacientes de los cuales se incorporan al estudio 208 (96,29%), ya que al momento del cierre del estudio 7 pacientes se encontraban aún ingresados en el hospital, 3 fueron trasladados a otras instituciones donde no fue posible conocer su evolución y en 8 ocasiones no fue posible acceder a la historia clínica; de ellos fallecen 32 (15,4%). &#10;Puede apreciarse con claridad la importante relación existente entre la mortalidad en UCI y la necesidad de VAM, ya que más del 85% del total de fallecidos en UCI está representado por pacientes que recibieron VAM. Resultado este que se espera si se considera que la necesidad de VAM se asocia a mayor gravedad y peor pronóstico en UCI. Cabría entonces preguntarse si sería peor el pronóstico de los pacientes que reciben VAM en UCI y se trasladan hacia sala convencional.&#10;&#10;Aspectos éticos:&#10;En el estudio no se realiza ningún tipo de intervención, en todos los casos se actúa según los protocolos de prácticas establecidos en el centro para cada patología.&#10;En ningún caso resulta posible identificar a alguno de los pacientes incluidos en el estudio, en las fichas de recolección de datos o en la base de datos digital no se recoge el nombre del paciente, el número de la historia clínica, la cama u otra información que permita identificar a los mismos.&#10;El perfil del proyecto fue sometido a la consideración del consejo científico del Hospital Arnaldo Milián Castro, donde además se analizaron los aspectos éticos relacionados con el mismo.&#10;No se declara conflicto de intereses.&#10;En resumen, el estudio de la mortalidad oculta es de gran importancia para los médicos y profesionales de la salud que trabajan en cuidados intensivos, ya que puede ayudar a identificar los factores de riesgo que pueden influir en la evolución de los pacientes después de su egreso de la UCI, mejorar la atención y el seguimiento de los pacientes después de su egreso de la UCI, y evaluar la calidad de la atención en el hospital en general." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <StackPane fx:id="ventanaemergente" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="182.0" maxWidth="440.0" minHeight="150.0" minWidth="440.0" prefHeight="182.0" prefWidth="440.0" style="-fx-background-color: white; -fx-background-radius: 25px;">
+               <children>
+                  <FontAwesomeIconView fill="#1a00ff" glyphName="CHECK_CIRCLE" layoutX="62.0" layoutY="106.0" size="90" wrappingWidth="71.20001220703125" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="37.42857360839844" />
+                  <Label layoutX="144.0" layoutY="64.0" prefHeight="27.0" prefWidth="266.0" style="-fx-text-fill: black;" text="Paciente agregado al sistema" AnchorPane.leftAnchor="144.0" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="dialogo" layoutX="180.0" layoutY="127.0" mnemonicParsing="false" onAction="#mostrarMortalidad" prefHeight="38.0" prefWidth="226.0" style="-fx-background-color: #1a00ff; -fx-background-radius: 10px;" text="Saber Mortalidad" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="cronometro" alignment="CENTER" layoutX="201.0" layoutY="126.0" prefHeight="35.0" prefWidth="30.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+      <StackPane fx:id="ventanaMortalidad" layoutX="248.0" layoutY="78.0" prefHeight="678.0" prefWidth="935.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="554.0" maxWidth="769.0" minHeight="150.0" minWidth="440.0" prefHeight="554.0" prefWidth="769.0" style="-fx-background-color: white; -fx-background-radius: 25px;">
+               <children>
+                  <Label layoutX="27.0" layoutY="14.0" prefHeight="27.0" prefWidth="253.0" style="-fx-text-fill: black;" text="La probabilidad sería de :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="graficaResultado" labelLineLength="50.0" layoutY="41.0" prefHeight="516.0" prefWidth="770.0" stylesheets="@../design/estadisticas.css" />
+                  <Button fx:id="dialogo1" layoutX="619.0" layoutY="13.0" mnemonicParsing="false" onAction="#CerrarMortalidad" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #1a00ff; -fx-background-radius: 10px;" text="Listo">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="25" wrappingWidth="33.600137615203835" />
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.4745098054409027" green="0.7921568751335144" blue="0.8745098114013672" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.35686275362968445" green="0.9176470637321472" blue="0.07450980693101883" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+      <MenuBar prefHeight="26.0" prefWidth="1217.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #918df2 0.0%, #918df2 0.6729%, #6d7ee3 35.9354%, #3d35cc 77.5236%, #3a36a4 100.0%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Archivos">
+               <items>
+                  <MenuItem fx:id="diagnosticonuevo" mnemonicParsing="false" onAction="#nuevo" text="Añadir/Editar Enfermedades">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ANGLE_RIGHT" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="causavamnueva" mnemonicParsing="false" onAction="#nuevo" text="Añadir/Editar Causas VAM">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ANGLE_RIGHT" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="procedimientonuevo" mnemonicParsing="false" onAction="#nuevo" text="Añadir/Editar Resultados de Defunsión-Necropsia">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ANGLE_RIGHT" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="salanueva" mnemonicParsing="false" onAction="#nuevo" text="Añadir/Editar Salas Hospitalarias">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ANGLE_RIGHT" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="paravolver" mnemonicParsing="false" onAction="#volver" text="Volver a Inicio">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REPLY" size="18" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#informacion" text="Información">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="18" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label focusTraversable="false" layoutX="1111.0" layoutY="-5.0" prefHeight="35.0" prefWidth="108.0" text="OSPITAL" textFill="WHITE" underline="true" AnchorPane.rightAnchor="-11.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="H_SQUARE" layoutX="1088.171380615231" layoutY="23.71428680419922" size="25" AnchorPane.rightAnchor="98.4000476837191" AnchorPane.topAnchor="2.285715103149414">
+         <effect>
+            <Reflection />
+         </effect></FontAwesomeIconView>
+   </children>
+
+
+</AnchorPane>

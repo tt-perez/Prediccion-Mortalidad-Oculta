@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/10/2023, 06:26:41 PM
+    Author     : racli
+*/
+
+/*.chart-title{
+-fx-font-family:Roboto;
+}
+.chart-legend{
+-fx-background-color: #79cadf;
+-fx-background-radius: 4px;
+-fx-bordder-radius: 4px;
+}*/
+.default-color0.chart-pie {
+    -fx-pie-color: #5bea13;
+}
+.default-color1.chart-pie {
+    -fx-pie-color: #413fc3;
+}

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="746.0" prefWidth="1205.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ffffff 0.0%, #ffffff 0.6729%, #e1e1dc 10.3634%, #c8c9bd 20.5922%, #b8b9ac 30.5518%, #b2b4a8 35.9354%, #9b9c95 47.2409%, #8e8e88 56.9314%, #7b7b78 71.3981%, #7b7b7b 80.6191%, #6d6e69 91.2195%, #6b6b6b 93.0013%, #535350 100.0%);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLVisitanteController">
+   <children>
+      <Circle fill="#e1e1dc" layoutX="129.0" layoutY="136.0" radius="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0">
+         <effect>
+            <DropShadow />
+         </effect></Circle>
+      <FontAwesomeIconView glyphName="USERS" layoutX="86.0" layoutY="165.0" size="80" wrappingWidth="94.39996337890625">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.10363391655450879">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.29744279946164165">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.42664872139973087">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.48317631224764446">
+                     <color>
+                        <Color red="0.28333333134651184" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5962314939434725">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.930013458950202">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9848734530413946">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIconView>
+      <Button fx:id="botPaciente" layoutX="20.0" layoutY="295.0" mnemonicParsing="false" onAction="#cambiarpaneles" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #535350; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageVisitante.css" text="Pacientes" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="18" />
+         </graphic>
+      </Button>
+      <Button fx:id="botEstad" focusTraversable="false" layoutX="20.0" layoutY="385.0" mnemonicParsing="false" onAction="#cambiarpaneles" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #535350; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageVisitante.css" text="Estadísticas" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="18" />
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="61.0" layoutY="208.0" prefHeight="27.0" prefWidth="140.0" text="Visitante">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="cerrar" focusTraversable="false" layoutX="20.0" layoutY="671.0" onAction="#cerrarApp" style="-fx-text-fill: black;" text="Salir" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="20.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="30" />
+         </graphic>
+      </Hyperlink>
+      <AnchorPane fx:id="PANELpACIENTE" layoutX="248.0" layoutY="89.0" prefHeight="657.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="89.0">
+         <children>
+            <TableView fx:id="tabla" editable="true" layoutX="14.0" layoutY="67.0" prefHeight="590.0" prefWidth="440.0" stylesheets="@../design/pageVisitante.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="481.0" AnchorPane.topAnchor="67.0">
+               <columns>
+                  <TableColumn fx:id="columnacodigo" minWidth="20.0" prefWidth="61.5999755859375" text="Paciente" />
+                  <TableColumn fx:id="columnaedad" prefWidth="43.999969482421875" text="Edad" />
+                  <TableColumn fx:id="columnasexo" prefWidth="43.999969482421875" text="Sexo" />
+                  <TableColumn fx:id="columnarazza" minWidth="20.0" prefWidth="44.000030517578125" text="Raza" />
+                  <TableColumn fx:id="columnaevolucion" minWidth="20.0" prefWidth="72.800048828125" text="Evolución" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <TextField fx:id="campo" layoutX="22.0" layoutY="17.0" prefHeight="38.0" prefWidth="370.0" promptText="  Buscar" style="-fx-background-color: white; -fx-background-radius: 20;" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Hyperlink fx:id="buscarporCodigo" focusTraversable="false" layoutX="349.0" layoutY="23.0" prefHeight="22.0" prefWidth="26.0" style="-fx-background-color: #3a36a4; -fx-background-radius: 20;" AnchorPane.leftAnchor="349.0" AnchorPane.topAnchor="23.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="18" />
+               </graphic>
+            </Hyperlink>
+            <Button fx:id="botestancia" layoutX="529.0" layoutY="579.0" mnemonicParsing="false" onAction="#mostrarEmergente" prefHeight="40.0" prefWidth="166.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #d95c5c; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageVisitante.css" text="Diagnósticos" textFill="WHITE" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="239.60000000000002">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="botMO" layoutX="728.0" layoutY="579.0" mnemonicParsing="false" onAction="#mostrarEmergente" prefHeight="40.0" prefWidth="166.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #d95c5c; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageVisitante.css" text="Pronóstico MO" textFill="WHITE" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="40.60000000000002">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="botfallec" layoutX="636.6" layoutY="527.0" mnemonicParsing="false" onAction="#mostrarEmergente" prefHeight="40.0" prefWidth="166.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #d95c5c; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageVisitante.css" text="Fallecimiento" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="90.0" AnchorPane.rightAnchor="132.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextArea fx:id="area" editable="false" layoutX="481.0" layoutY="28.0" prefHeight="485.0" prefWidth="432.0" style="-fx-background-color: WHITE; -fx-background-insets: 0; -fx-background-radius: 0;" visible="false" wrapText="true" AnchorPane.bottomAnchor="144.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="28.0">
+               <effect>
+                  <DropShadow height="49.07" radius="25.79" width="56.09">
+                     <color>
+                        <Color red="0.6421052813529968" green="0.5160623788833618" blue="0.5160623788833618" />
+                     </color>
+                  </DropShadow>
+               </effect></TextArea>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneliNFO" layoutX="248.0" layoutY="88.0" prefHeight="657.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="88.0">
+         <children>
+            <TextArea editable="false" prefHeight="657.0" prefWidth="935.0" stylesheets="@../design/pageDoctor.css" text="Los servicios de cuidados intensivos son altamente costosos y exigen el empleo de equipamiento tecnológico avanzado y personal altamente calificado trabajando de forma constante, para poder lograr la recuperación de los pacientes. Siempre que un paciente en estado crítico logra egresarse de una unidad de terapia intensiva (UTI) puede considerarse que se ha ganado una difícil batalla, y su fallecimiento luego del egreso de estas unidades, debe analizarse con extrema seriedad. Por tanto, debe continuar el cuidado hasta la recuperación y el egreso hospitalario satisfactorio de estos pacientes que han tomado más tiempo y recursos recuperarse, dada la naturaleza de su enfermedad. El análisis de la mortalidad luego del alta en las unidades de atención al grave, también definido como mortalidad oculta (MO), ha sido objeto de estudio y seguimiento en algunos países, tal es el caso de nuestro país.&#10;Dado que predecir con precisión el riesgo de mortalidad en los pacientes durante y después de la estancia en la UCI es un componente esencial para apoyar la toma de decisiones en cuidados críticos, nos hemos dado la tarea de construir un score pronóstico como predictor de la supervivencia intrahospitalaria post egreso de UCI en los pacientes ventilados por 24 horas o más en Terapia Intensiva.&#10;&#10;La propuesta de score pronóstico pos-egreso para el paciente ventilado en UCI es un estudio que aborda la importante problemática de la &quot;mortalidad oculta&quot; en pacientes ventilados en cuidados intensivos. La mortalidad oculta se refiere a los fallecimientos que ocurren después del egreso de la UCI, lo cual puede ser un parámetro de calidad hospitalaria y un área de mejora en la atención médica. Este fenómeno es relevante, ya que si un paciente es dado de alta de la UCI y posteriormente fallece en sala convencional, estadísticamente se reporta como recuperado en UCI, lo que puede distorsionar la percepción de la efectividad de los cuidados intensivos.&#10;&#10;El estudio aborda esta problemática mediante la recolección de datos de pacientes ventilados en cuidados intensivos del Hospital Universitario Clínico Quirúrgico “Arnaldo Milán Castro”. Se realiza un análisis detallado de la mortalidad pos-traslado de UCI, definiendo este término como la muerte que ocurre una vez trasladado el paciente desde UCI a sala convencional sin haber abandonado el hospital. Para determinar la mortalidad oculta, se aplica una fórmula que relaciona el número de fallecidos intrahospitalarios con el total de pacientes trasladados vivos de la UCI incluidos en el estudio.&#10;&#10;Además, se realiza un análisis descriptivo de todas las variables, mostrando los resultados mediante tablas de distribución de frecuencia y determinando las medidas de tendencia central y de dispersión de las variables estudiadas. Se utiliza el método MICMAC (Matriz de Impactos Cruzados-Multiplicación Aplicada a una Clasificación) para la identificación de las variables clave del sistema, lo que permite identificar las variables que tienen un impacto significativo en la evolución de eventos adversos.&#10;&#10;En resumen, el estudio no solo se enfoca en la construcción de un score pronóstico, sino que también aborda la importante problemática de la mortalidad oculta en pacientes ventilados en cuidados intensivos, utilizando un enfoque estadístico riguroso para identificar las variables clave que influyen en la evolución de eventos adversos después del egreso de la UCI.&#10;&#10;Características generales de la investigación. Tipo y diseño del estudio.&#10;Se realiza una investigación de desarrollo, observacional, descriptiva, longitudinal y prospectiva, en la UCI del Hospital Universitario Arnaldo Milián Castro de Villa Clara en el período comprendido desde enero del año 2014 a diciembre del año 2016.&#10;&#10;Universo y muestra&#10;El universo de estudio quedó conformado por 226 pacientes que recibieron ventilación artificial mecánica por 24 horas o más durante su estancia en UCI y fueron egresados a otro servicio del propio centro hospitalario. La muestra estuvo conformada por 208 pacientes.&#10;Criterios de inclusión&#10;- Pacientes ingresados en UCI con tiempo de VAM ≥ 24 horas que se egresaron vivos a otro servicio del centro.&#10;Criterios de exclusión&#10;- Pacientes egresados de UCI hacia otras instituciones de salud donde no se pudo conocer la evolución final.&#10;- Pacientes en los que se apruebe alguna modalidad de limitación del esfuerzo terapéutico durante la estancia en UCI o fuera de esta.&#10;- Pacientes que aún permanecían en el hospital al momento del cierre del estudio.&#10;- Pacientes en los que la información recolectada no estuvo disponible por dificultades con la historia clínica.&#10;&#10;Análisis y discusión de los resultados:&#10;Durante el período de estudio ingresan en UCI un total de 1027 pacientes de los cuales fallecen 189 (18,4%), se aplica ventilación artificial mecánica en 495 pacientes de los cuales fallecen en UCI 161 (32,5%), representando los fallecidos ventilados el 85,18% del total de pacientes fallecidos. Se ventilan 24 horas o más 334 pacientes de los que fallecen 108 (32.3%). Se egresan satisfactoriamente 226 pacientes de los cuales se incorporan al estudio 208 (96,29%), ya que al momento del cierre del estudio 7 pacientes se encontraban aún ingresados en el hospital, 3 fueron trasladados a otras instituciones donde no fue posible conocer su evolución y en 8 ocasiones no fue posible acceder a la historia clínica; de ellos fallecen 32 (15,4%). &#10;Puede apreciarse con claridad la importante relación existente entre la mortalidad en UCI y la necesidad de VAM, ya que más del 85% del total de fallecidos en UCI está representado por pacientes que recibieron VAM. Resultado este que se espera si se considera que la necesidad de VAM se asocia a mayor gravedad y peor pronóstico en UCI. Cabría entonces preguntarse si sería peor el pronóstico de los pacientes que reciben VAM en UCI y se trasladan hacia sala convencional.&#10;&#10;Aspectos éticos:&#10;En el estudio no se realiza ningún tipo de intervención, en todos los casos se actúa según los protocolos de prácticas establecidos en el centro para cada patología.&#10;En ningún caso resulta posible identificar a alguno de los pacientes incluidos en el estudio, en las fichas de recolección de datos o en la base de datos digital no se recoge el nombre del paciente, el número de la historia clínica, la cama u otra información que permita identificar a los mismos.&#10;El perfil del proyecto fue sometido a la consideración del consejo científico del Hospital Arnaldo Milián Castro, donde además se analizaron los aspectos éticos relacionados con el mismo.&#10;No se declara conflicto de intereses." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextArea>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane fx:id="panelEstadistica" layoutY="89.0" prefHeight="657.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" stylesheets="@../design/pageDoctor.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="89.0">
+         <children>
+            <AnchorPane fx:id="mostrarGrafica" layoutX="365.0" layoutY="20.0" prefHeight="398.0" prefWidth="563.0" style="-fx-background-radius: 20px;" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="17.0" />
+            <AnchorPane fx:id="mostrarbarras" layoutX="14.0" layoutY="324.0" prefHeight="377.0" prefWidth="488.0" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="3.0" />
+            <AnchorPane fx:id="lineas" prefHeight="242.0" prefWidth="379.0" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="556.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <LineChart fx:id="gr11" prefHeight="252.0" prefWidth="379.0" style="-fx-background-color: transparent;" title="Grafica de rayitas1" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" fx:id="x1" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="y1" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="lineas2" layoutX="488.0" layoutY="444.0" prefHeight="207.0" prefWidth="432.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="494.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="470.0">
+               <children>
+                  <LineChart fx:id="gr22" layoutY="-17.0" prefHeight="202.0" prefWidth="432.0" style="-fx-background-color: transparent;" title="                                      Grafica de rayitas2" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-17.0">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" fx:id="x2" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="y2" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <Label fx:id="marcador" layoutX="262.0" layoutY="44.0" prefHeight="32.0" prefWidth="730.0" text="REGISTRO DE PACIENTES">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="-1.0" prefHeight="26.0" prefWidth="1205.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ffffff 0.0%, #ffffff 0.6729%, #e1e1dc 10.3634%, #c8c9bd 20.5922%, #b8b9ac 30.5518%, #b2b4a8 35.9354%, #9b9c95 47.2409%, #8e8e88 56.9314%, #7b7b78 71.3981%, #7b7b7b 80.6191%, #6d6e69 91.2195%, #6b6b6b 93.0013%, #535350 100.0%);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" style="fx-background-color: red;" text="Archivos">
+               <items>
+                  <MenuItem fx:id="paravolver1" mnemonicParsing="false" onAction="#volver" text="Volver a Inicio">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REPLY" size="18" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#info" text="Información">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="18" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <StackPane fx:id="ventanaDatosUci" prefHeight="730.0" prefWidth="1205.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="478.0" maxWidth="683.0" minHeight="150.0" minWidth="440.0" prefHeight="478.0" prefWidth="683.0" style="-fx-background-color: white; -fx-background-radius: 25px;" StackPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="305.0" layoutY="432.0" mnemonicParsing="false" onAction="#cerrarVent" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #1a00ff; -fx-background-radius: 10px;" text="OK" textFill="WHITE" AnchorPane.leftAnchor="305.0" AnchorPane.rightAnchor="305.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="20" wrappingWidth="18.0" />
+                     </graphic>
+                  </Button>
+                  <PieChart fx:id="graficaResultado23" layoutX="359.0" layoutY="15.0" prefHeight="413.0" prefWidth="538.0" stylesheets="@../design/estadisticas.css" visible="false" AnchorPane.bottomAnchor="49.799999999999955" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
+                  <TableView fx:id="tablapre" layoutX="14.0" layoutY="10.0" prefHeight="414.0" prefWidth="331.0" stylesheets="@../design/pageDoctor.css">
+                    <columns>
+                      <TableColumn fx:id="columnapre" prefWidth="186.3999605178833" text="Al ingresar en UCI" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView fx:id="tablapost" layoutX="350.0" layoutY="10.0" prefHeight="414.0" prefWidth="310.0" stylesheets="@../design/pageDoctor.css">
+                     <columns>
+                        <TableColumn fx:id="columnapost" prefWidth="186.3999605178833" text="Al egresar de UCI" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <AnchorPane fx:id="panelfallecimiento" layoutX="14.0" layoutY="10.0" prefHeight="414.0" prefWidth="658.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.800000000000068" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ComboBox fx:id="procedimiento" layoutX="243.0" layoutY="10.0" prefHeight="26.0" prefWidth="218.0" promptText="Seleccionar" style="-fx-background-color: TRANSPARENT;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label layoutX="120.0" layoutY="13.0" prefHeight="18.0" prefWidth="108.0" text="Procedimiento:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tablaprocedimiento" layoutX="20.0" layoutY="52.0" prefHeight="355.0" prefWidth="626.0" stylesheets="@../design/pageDoctor.css">
+                          <columns>
+                            <TableColumn fx:id="columnaresultado" prefWidth="75.0" text="Resultado" />
+                            <TableColumn fx:id="columnatipo" prefWidth="75.0" text="Tipo de muerte" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Text fx:id="nonecro" fill="#302222" layoutX="107.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No se le realizó necropsia" textAlignment="CENTER" visible="false" wrappingWidth="453.3367919921875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+      <Label focusTraversable="false" layoutX="1104.0" layoutY="-4.0" prefHeight="35.0" prefWidth="108.0" text="OSPITAL" textFill="WHITE" underline="true" AnchorPane.rightAnchor="-7.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="H_SQUARE" layoutX="1081.3714416503954" layoutY="22.71428680419922" size="25" AnchorPane.rightAnchor="102.19998664855484" AnchorPane.topAnchor="1.285715103149414">
+         <effect>
+            <Reflection />
+         </effect>
+      </FontAwesomeIconView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
